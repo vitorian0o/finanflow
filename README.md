@@ -38,13 +38,15 @@ Quem toca um negócio pequeno costuma acompanhar o caixa em planilha, extrato e 
 
 ## Vídeos da demonstração
 
-Clique no print para abrir o vídeo do fluxo principal. Os outros dois estão no repositório.
+Demonstração no YouTube (1080p), com cartões de título entre cada seção:
 
-[![Assistir login e dashboard](docs/videos/thumbnail.png)](docs/videos/01-login-dashboard.webm)
+[![Assistir a demonstração](docs/videos/thumbnail.png)](https://youtu.be/0CFcBEiOS54)
 
-- [Login e dashboard](docs/videos/01-login-dashboard.webm) — acesso à conta demo, indicadores, período e alertas
-- [Contas a pagar](docs/videos/02-contas-a-pagar.webm) — vencimentos e marcar como pago
-- [Importação de CSV](docs/videos/03-importacao-csv.webm) — validação com Pandas e gravação dos registros válidos
+[Assistir no YouTube](https://youtu.be/0CFcBEiOS54)
+
+1. Login e dashboard
+2. Contas a pagar
+3. Importação de CSV
 
 ## Stack
 

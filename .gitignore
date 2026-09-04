@@ -42,3 +42,5 @@ postgres_data/
 # Uploads / local artifacts
 *.db
 *.sqlite3
+docs/videos/_preview/
+docs/videos/_compose/
