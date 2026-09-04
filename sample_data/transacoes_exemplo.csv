@@ -1,0 +1,6 @@
+data,descricao,categoria,tipo,valor,status,vencimento,cliente,observacao
+01/09/2026,Pagamento fornecedor,Fornecedores,despesa,1200,pago,,,
+02/09/2026,Venda #1023,Vendas,receita,850,pago,,,
+03/09/2026,Conta de energia,Operacional,despesa,430,pago,,,
+05/09/2026,Retainer mensal Norte Alimentos,Serviços,receita,2800,pendente,10/09/2026,Norte Alimentos,Fatura setembro
+08/09/2026,Licença Figma,Software,despesa,89,pago,,,

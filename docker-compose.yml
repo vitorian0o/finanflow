@@ -1,0 +1,43 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: finanflow
+      POSTGRES_PASSWORD: finanflow
+      POSTGRES_DB: finanflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U finanflow -d finanflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      SECRET_KEY: ${SECRET_KEY:-change-me-to-a-long-random-string-32chars}
+      DATABASE_URL: postgresql+psycopg://finanflow:finanflow@db:5432/finanflow
+      CORS_ORIGINS: http://localhost:5173,http://localhost:8080,http://localhost:3000
+      TZ: America/Sao_Paulo
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: ""
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
